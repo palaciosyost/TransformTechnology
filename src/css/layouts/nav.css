@@ -1,0 +1,8 @@
+.mensaje {
+  background-color: rgb(5, 5, 138);
+  color: aliceblue;
+}
+.mensaje h5 {
+  margin: 0px;
+  text-align: center;
+}

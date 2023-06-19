@@ -1,0 +1,98 @@
+* {
+  box-sizing: border-box; }
+
+body {
+  margin: 0px;
+  font-family: sans-serif; }
+
+.bg {
+  height: 300px;
+  border-radius: 18%;
+  background-color: #0d65f8;
+  position: absolute;
+  top: -100px;
+  right: 0px;
+  left: 0px; }
+
+.contenedor {
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  margin-top: 60px; }
+  .contenedor img {
+    width: 300px;
+    height: 200px;
+    position: relative;
+    border: 4px solid #0d65f8;
+    border-radius: 15px; }
+  .contenedor .content {
+    width: 300px;
+    height: auto;
+    text-align: center; }
+    .contenedor .content h1 {
+      margin-bottom: 0px;
+      margin-top: 10px;
+      font-weight: bold; }
+      @media screen and (max-width: 768px) {
+        .contenedor .content h1 {
+          font-size: 2.8em; } }
+    .contenedor .content p {
+      margin-bottom: 8px;
+      font-size: 12px;
+      text-align: start;
+      margin-left: 30px;
+      color: #0d65f8; }
+      @media screen and (max-width: 768px) {
+        .contenedor .content p {
+          font-size: 1em;
+          margin-left: 22px; } }
+    .contenedor .content form {
+      margin-top: 20px;
+      display: flex;
+      flex-flow: column nowrap;
+      gap: 30px;
+      align-items: center; }
+      .contenedor .content form .enlaces span {
+        color: #0d65f8;
+        font-size: 14px; }
+      .contenedor .content form .btn-principal {
+        background-color: #0d65f8;
+        border: 0px solid blue;
+        width: 90%;
+        height: 30px;
+        border-radius: 3px;
+        color: #d5d5d5;
+        font-weight: 700; }
+        .contenedor .content form .btn-principal:hover {
+          transform: scale(1.1);
+          background-color: #4080ef; }
+      .contenedor .content form .form {
+        width: 300px;
+        height: 35px;
+        border-radius: 30px;
+        display: flex;
+        gap: 30px;
+        justify-content: center; }
+        .contenedor .content form .form .content-form {
+          width: auto;
+          height: 40px;
+          display: flex;
+          align-items: center;
+          border-radius: 10px;
+          background: #e0e0e0;
+          box-shadow: inset 6px -6px 2px #d5d5d5, inset -6px 6px 2px #ebebeb; }
+          .contenedor .content form .form .content-form svg {
+            margin-left: 13px; }
+          .contenedor .content form .form .content-form input {
+            width: 100%;
+            background-color: transparent;
+            border: none;
+            margin-left: 10px; }
+            .contenedor .content form .form .content-form input:focus {
+              outline: none; }
+            .contenedor .content form .form .content-form input:-webkit-autofill {
+              background-color: transparent; }
+
+/*# sourceMappingURL=login.css.map */

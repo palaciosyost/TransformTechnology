@@ -1,0 +1,167 @@
+$color-nav: #373737;
+$color-primary: #0d65f8;
+@mixin tablet {
+  @media screen and (min-width: 800px) {
+    @content;
+  }
+}
+@mixin compu {
+  @media screen and (min-width: 1120px) {
+    @content;
+  }
+}
+@mixin compumax {
+  @media screen and (min-width: 1440px) {
+    @content;
+  }
+}
+.mensaje {
+  background-color: $color-primary;
+  width: 100vw;
+  height: 60px;
+  color: aliceblue;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 800;
+  position: fixed;
+  h5 {
+    margin: 0px;
+    text-align: center;
+    font-size: 0.9em;
+    @include compu() {
+        font-size: 1.1em;
+    }
+  }
+  .hamburger {
+    filter: invert(100%);
+    z-index: 990;
+    @include compu(){
+        display: none;
+    }
+  }
+}
+.navegador {
+  width: 100vw;
+  height: 90px;
+  background-color: $color-nav;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  padding-top: 70px;
+  position: fixed;
+  transition: all 0.3s ease-in-out;
+  transform: translateY(-1000%);
+  @include compu() {
+    flex-flow: row nowrap;
+    transform: translateY(0px);
+  }
+  @include compu() {
+    padding-top: 0px;
+    margin-top: 60px;
+    justify-content: space-between;
+  }
+  .img {
+    width: 220px;
+    height: 140px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    @include tablet() {
+      width: 260px;
+      height: 160px;
+    }
+    @include compu() {
+      width: 140px;
+      height: 70px;
+      margin-left: 10px;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+      border: 2px solid $color-primary;
+    }
+  }
+  .titulo {
+    color: white;
+    display: none;
+    @include compumax() {
+      display: block;
+    }
+  }
+  .enlaces {
+    padding: 15px;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 25px;
+    align-items: center;
+    overflow-y: auto;
+    @include compu() {
+      flex-flow: row nowrap;
+    }
+    a {
+      text-decoration: none;
+      color: white;
+      @include tablet() {
+        font-size: 24px;
+      }
+      @include compu() {
+        font-size: 14px;
+        border-right: 2px solid white;
+        padding-right: 15px;
+      }
+      &:hover {
+        color: $color-primary;
+        text-decoration: underline;
+        @include compu() {
+          border-right: 2px solid $color-primary;
+        }
+      }
+      svg {
+        margin-right: 10px;
+        @include tablet() {
+          width: 30px;
+        }
+        @include compu() {
+          width: 23px;
+        }
+      }
+    }
+    button {
+      background-color: $color-primary;
+      border-radius: 10px;
+      border: none;
+      width: 200px;
+      color: white;
+      &:hover{
+        box-shadow: -11px 11px 10px black;
+        transition: all .3s ease-in-out;
+        transform: translatey(-10px);
+      } 
+      @include tablet() {
+        width: 241px;
+        font-size: 20px;
+      }
+      @include compu() {
+        font-size: 15px;
+        width: 120px;
+        margin-right: 20px;
+      }
+      svg {
+        padding: 5px;
+        width: 40px;
+        @include tablet() {
+          width: 50px;
+        }
+        @include compu() {
+          width: 30px;
+        }
+      }
+    }
+  }
+}
+.active {
+  transition: all 0.4s ease-in-out;
+  transform: translateY(0vh);
+}
